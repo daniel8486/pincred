@@ -1,6 +1,6 @@
 
 set :application_name, 'pincred'
-#set :domain, 'pincred.com.br'
+set :domain, 'pincred.com.br'
 set :repo_url, 'git@github.com:daniel8486/pincred.git'
 #set :branch, 'master'
 
@@ -34,8 +34,8 @@ end
  desc "Restart Nginx"
    task :nginx_restart do
    on roles(:app) do
-    execute "sudo service nginx restart"
-  end
+   execute "sudo service nginx restart"
+end
 end
 
 before :start, :create_dirs
