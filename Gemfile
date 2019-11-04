@@ -44,6 +44,7 @@ gem 'carrierwave', '~> 2.0'
 gem 'cancancan'
 gem 'ed25519', '~> 1.2', '>= 1.2.4'
 gem 'bcrypt_pbkdf', '~> 1.0'
+gem 'sshkit-sudo'
 #gem 'mina'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

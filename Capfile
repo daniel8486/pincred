@@ -5,6 +5,7 @@ require "capistrano/scm/git"
 require "capistrano/rvm"
 require "capistrano/rails"
 require "capistrano/puma"
+require "sshkit/sudo"
 
 
 install_plugin Capistrano::SCM::Git
