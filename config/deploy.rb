@@ -2,7 +2,7 @@
 set :application_name, 'pincred'
 #set :domain, 'pincred.com.br'
 set :deploy_to, '/var/www/pincred'
-set :repository, 'git@github.com:daniel8486/pincred.git'
+set :repository, 'git://git@github.com/daniel8486/pincred.git'
 #set :branch, 'master'
 
 append :linked_files, "config/database.yml", "config/storage.yml", "config/master.key"
