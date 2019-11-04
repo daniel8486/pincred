@@ -2,7 +2,7 @@
 require "capistrano/setup"
 require "capistrano/deploy"
 require "capistrano/scm/git"
-require "capistrano/rvm", 'https://get.rvm.io'
+require "capistrano/rvm"
 require "capistrano/rails"
 require "capistrano/puma"
 require "sshkit/sudo"
