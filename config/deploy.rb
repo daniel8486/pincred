@@ -1,6 +1,6 @@
 
 set :application_name, 'pincred'
-set :domain, 'pincred.com.br'
+set :domain, 'https://www.pincred.com.br'
 set :repo_url, 'git@github.com:daniel8486/pincred.git'
 #set :branch, 'master'
 
