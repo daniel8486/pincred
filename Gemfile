@@ -45,9 +45,13 @@ gem 'cancancan'
 gem 'ed25519', '~> 1.2', '>= 1.2.4'
 gem 'bcrypt_pbkdf', '~> 1.0'
 gem 'sshkit-sudo'
+gem 'nokogiri'
+gem 'rack', '~> 2.0.1'
+gem 'rspec'
 #gem 'mina'
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+
+#gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
