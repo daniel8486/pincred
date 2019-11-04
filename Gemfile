@@ -40,7 +40,7 @@ gem 'kaminari'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'carrierwave', '~> 2.0'
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.8'
 gem 'cancancan'
 gem 'ed25519', '~> 1.2', '>= 1.2.4'
 gem 'bcrypt_pbkdf', '~> 1.0'
