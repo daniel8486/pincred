@@ -34,7 +34,7 @@ end
  desc "Restart Nginx"
    task :nginx_restart do
    on roles(:app) do
-   execute "sudo su service nginx restart"
+   execute "sudo service nginx restart"
  end
 end
 
