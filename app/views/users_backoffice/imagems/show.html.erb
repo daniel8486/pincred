@@ -1,0 +1,35 @@
+<div class="container">
+<h1> Mostrando Imagens 3 </h1>
+<table>
+        <thead>
+          <tr>
+              <tr>
+              <th class="center"> Titulo</th>
+              <th class="center"> Conteudo </th>
+              <th class="center"> Imagem </th>
+          </tr>
+</div>
+
+
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td> <%= @imagem.title %> </td>
+            <td> <%= @imagem.content  %> </td>
+            <td> <%= image_tag(@imagem.avatar_url(:thumb).to_s) %> </td>
+         
+            <td>  
+             <%=  link_to 'Editar' , edit_users_backoffice_imagem_path(@imagem), class:"waves-effect grey btn"  %>
+             <%=  link_to 'Voltar' , users_backoffice_imagems_path , class:"waves-effect yellow btn" %>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+  
+</div>
+
+</div>

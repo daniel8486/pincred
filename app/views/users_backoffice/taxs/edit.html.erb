@@ -1,0 +1,8 @@
+<div class="container">
+<h1> Editar Taxas </h1>
+
+<%= render 'form', tax: @tax %>
+
+<%= link_to 'Mostrar', users_backoffice_tax_path(@tax) , class: "waves-effect green btn" %> |
+<%= link_to 'Voltar', users_backoffice_taxs_path , class: "waves-effect yellow btn" %>
+</div>

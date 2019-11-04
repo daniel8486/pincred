@@ -1,0 +1,2 @@
+class Prsa < ApplicationRecord
+end

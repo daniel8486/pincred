@@ -1,0 +1,54 @@
+
+<div class="container">
+
+<br>
+<br>
+
+<p id="notice"><%= notice %></p>
+
+<h1> Sobre a Financeira </h1>
+
+<table class="bordered highlight right">
+  <thead>
+    <tr> </tr>
+    <tr>
+      <th> <%= link_to 'Incluir', new_users_backoffice_about_path , class: "waves-effect blue btn" %> </th>
+    </tr>
+  </thead>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo:</th>
+      <th>Texto: </th>
+      <th>Status: </th>
+      <th> Ações </th>
+      <th> Mostrar </th>
+      <th> Editar </th>
+      <th> Excluir </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @abouts.each do |about| %>
+      <tr>
+        <td><%= about.description %></td>
+        <td><%= truncate(about.text.html_safe, :length => 100)  %></td>
+        <td><%= about.status %></td>
+        <td> </td>
+        <td><%= link_to 'Mostrar', users_backoffice_about_path(about), class: "waves-effect green btn"%></td>
+        <td><%= link_to 'Editar', edit_users_backoffice_about_path(about), class: "waves-effect yellow btn"%></td>
+        <td><%= link_to 'Excluir', users_backoffice_about_path(about) , method: :delete, data: { confirm: 'Are you sure?' } ,class: "waves-effect red btn"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+</div>

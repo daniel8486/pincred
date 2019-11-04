@@ -1,0 +1,37 @@
+<div class="container">
+<h1> Mostrando SCR </h1>
+<table>
+        <thead>
+          <tr>
+              <tr>
+              <th class="center"> Titulo:</th>
+              <th class="center"> Descrição: </th>
+              <th class="center"> Ações: </th>
+              <th class="center"> Editar </th>
+              <th class="center"> Voltar </th>
+          </tr>
+</div>
+
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td> <%= @scr.title %> </td>
+            <td> <%= @scr.description.html_safe %> </td>
+            <td>  
+             <%=  link_to 'Editar' , edit_users_backoffice_scr_path(@scr), class:"waves-effect grey btn"  %>
+            </td> 
+             
+             <td>
+             <%=  link_to 'Voltar' , users_backoffice_scrs_path , class:"waves-effect yellow btn" %>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+  
+</div>
+
+</div>

@@ -1,0 +1,49 @@
+
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<h1> Listar Contatos </h1>
+
+<table>
+        <thead>
+           <tr> 
+             <tr>
+              <th> <strong> NOME : </strong> </th>
+              <th> <strong> RG </strong> </th>
+              <th>  <strong>CPF</strong> <th>
+              <th><strong> EMAIL  </strong></th>
+              <th> <strong> TELEFONE </strong> </th>
+              <th> <strong> ENDEREÇO </strong> </th>
+              <th>  <strong> TITULO </strong> <th>
+              <th><strong> CONTEUDO </strong></th>
+              <th><strong> Ações </strong> </th>
+              <th><strong> Editar </strong> </th>
+              <th><strong> Voltar </strong> </th>
+            </tr>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            
+            <td> <%= @contact.description_name  %></td>
+            <td>  <%= @contact.rg %> </td>
+            <td> <%= @contact.cpf   %> </td>
+            <td> <%= @contact.email %></td>
+            <td>  <%= @contact.phone %> </td>
+            <td> <%= @contact.address  %> </td>
+            <td> <%= @contact.title %></td>
+            <td>  <%= @contact.content.html_safe %> </td>
+            <td> </td>
+            <td> 
+              <%= link_to 'Editar', edit_users_backoffice_contact_path(@contact), class: "waves-effect green btn" %> 
+            </td>
+            <td>
+               <%= link_to 'Voltar', users_backoffice_contacts_path, class: "waves-effect yellow btn"  %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>

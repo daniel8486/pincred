@@ -1,0 +1,31 @@
+<h1> Listagem de Taxas </h1>
+<table>
+        <thead>
+          <tr>
+              <th class="center"> ID </th>
+              <th class="center"> titulo </th>
+              <th class="center"> Conteudo </th>
+              <th class="center"> Actions </th>
+</div>
+
+
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td> <%= @out.id %> </td>
+            <td> <% @out.title %> </td>
+            <td> <%= @out.content %> </td>
+            <td><%= @out.status%></td>
+            <td>  
+             <%=  link_to 'Editar' , edit_users_backoffice_outs_path(@out), class:"waves-effect grey btn"  %>
+             <%=  link_to 'Voltar' , users_backoffice_outs_path , class:"waves-effect yellow btn" %>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+  
+</div>

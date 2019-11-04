@@ -1,0 +1,50 @@
+<div class="container">
+<div class="row">
+   <div class="col-lg-12">
+      <h1 class="page-header"> <h3 class="center-align"> Listando Educação Financeira</h3> </h1>
+   </div>
+</div>  
+    
+    <div class="left"> 
+  
+  <%=  link_to 'Incluir' , new_users_backoffice_ticket_path , class:"waves-effect blue btn"  %>
+
+    </div> 
+
+<table>
+        <thead>
+          <tr>
+              <th class="center"> Titulo</th>
+              <th class="center"> Descrição </th>
+              <th class="center"> Ações </th>
+              <th class="center"> Editar</th>
+              <th class="center"> Mostrar </th>
+              <th class="center"> Excluir </th>
+          </tr>
+        </thead>
+
+        <tbody>
+        <% @tickets.each do |ticket| %>
+          <tr>
+            <td> <%= ticket.title %> </td>
+            <td> <%= ticket.description.truncate(250).html_safe %> </td>
+            <td>  
+             <%=  link_to 'Editar' , edit_users_backoffice_ticket_path(ticket), class:"waves-effect grey btn"  %>
+            </td>
+            <td> 
+              <%=  link_to 'Mostrar' , users_backoffice_ticket_path(ticket), class:"waves-effect green btn" %>
+            </td>
+            <td> 
+             <%=  link_to 'Excluir' , users_backoffice_tickets_path(ticket), class:"waves-effect red btn" ,method: :delete , data: {confirm: "Deseja realmente excluir ?"} %>
+            </td>
+          </tr>
+        <% end %>  
+        </tbody>
+      </table>
+
+<div class="center">
+      <%#= paginate @correspondents %>
+</div>     
+
+
+</div>

@@ -1,0 +1,47 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<h1> Listagem Quem Somos </h1>  
+
+<table class="bordered highlight right">
+  <thead>
+    <tr> </tr>
+    <tr>
+      <th> <%= link_to 'Incluir', new_users_backoffice_who_path , class: "waves-effect blue btn" %> </th>
+    </tr>
+  </thead>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Conteúdo</th>
+      <th>Status</th>
+      <th> Ações </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @whos.each do |who| %>
+      <tr>
+        <td><%= who.title %></td>
+        <td><%= who.content.html_safe %></td>
+        <td><%= who.status %></td>
+        <td><%= link_to 'Mostrar', users_backoffice_who_path(who) , class: "waves-effect green btn"%></td>
+        <td><%= link_to 'Editar', edit_users_backoffice_who_path(who) , class: "waves-effect yellow btn"%></td>
+        <td><%= link_to 'Excluir', users_backoffice_who_path(who) , method: :delete, data: { confirm: 'Are you sure?' } ,class: "waves-effect red btn"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+</div>
+
+

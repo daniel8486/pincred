@@ -1,0 +1,43 @@
+<div class="container">
+<h1> Mostrando Banners </h1>
+<table>
+        <thead>
+          <tr>
+              <tr>
+              <th class="center"> Titulo:</th>
+              <th class="center"> Conteudo: </th>
+              <th class="center"> Imagem: </th>
+              <th class="center"> Posicao: </th>
+              <th class="center"> Ações: </th>
+              <th class="center"> Editar </th>
+              <th class="center"> Voltar </th>
+          </tr>
+</div>
+
+
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td> <%= @banner.title %> </td>
+            <td> <%= @banner.content.html_safe %> </td>
+            <td> <%= @banner.image %> </td>
+            <td> <%= @banner.position %></td>
+           <td>  <%= image_tag(@banner.avatar_url(:thumb).to_s) %> </td>
+            <td>  
+             <%=  link_to 'Editar' , edit_users_backoffice_banner_path(@banner), class:"waves-effect grey btn"  %>
+            </td> 
+             
+             <td>
+             <%=  link_to 'Voltar' , users_backoffice_banners_path , class:"waves-effect yellow btn" %>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+  
+</div>
+
+</div>

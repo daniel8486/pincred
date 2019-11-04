@@ -1,0 +1,32 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<h1> Mostrar Taxa de Risco </h1>
+
+<table>
+        <thead>
+          <tr>
+              <th> <strong> Titulo:</strong> </th>
+              <td> <strong> Texto: </strong> </td>
+              <th>  <strong> Ações:  </strong></th>
+              <th> <strong> Editar </strong>  </th>
+              <th> <strong> Voltar </strong> </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            
+            <td> <%= @risk.title  %> </td>
+            <td>  <%= @risk.content.html_safe %> </td>
+            <td> 
+            <%= link_to 'Editar', edit_users_backoffice_risk_path(@risk) , class: "waves-effect green btn" %> 
+            </td> 
+            <td>
+<%= link_to 'Voltar', users_backoffice_risks_path , class: "waves-effect yellow btn"  %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>  

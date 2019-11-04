@@ -1,0 +1,37 @@
+<%= form_with(model: [:users_backoffice, @matching], local: true) do |form| %>
+  <% if @matching.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(matching.errors.count, "error") %> prohibited this about from being saved:</h2>
+
+      <ul>
+      <% matching.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description , placeholder: 'Descreva os Correspodentes: '%>
+    <%= form.cktext_area :description %>
+  </div>
+
+   <div class="field">
+    <%= form.label :content , placeholder: 'Descreva um conteudo complementar :' %>
+    <%= form.cktext_area :content %>
+  </div>
+
+
+<br> </br>
+ 
+  <div class="actions">
+    <a class="waves-effect grey btn">  <%= form.submit %> </a>
+  </div>
+<% end %>
+
+

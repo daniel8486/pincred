@@ -1,0 +1,8 @@
+<div class="container">
+<h1> Editar Credito </h1>
+
+<%= render 'form', credit: @credit %>
+
+<%= link_to 'Mostrar', users_backoffice_credit_path(@credit) , class: "waves-effect green btn" %> |
+<%= link_to 'Voltar', users_backoffice_credits_path , class: "waves-effect yellow btn" %>
+</div>

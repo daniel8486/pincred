@@ -1,0 +1,47 @@
+<div class= "container">
+
+<div class="row">
+   <div class="col-lg-12">
+      <h1 class="page-header"> <h3 class="center-align"> Listando as INFOS </h3> </h1>
+   </div>
+</div>  
+    
+    <div class="right"> 
+  
+  <%=  link_to 'Incluir' ,  new_users_backoffice_info_path , class:"waves-effect blue btn"  %>
+
+    </div>
+
+<table>
+        <thead>
+          <tr>
+              <th class="center"> ID </th>
+              <th class="center"> title</th>
+              <th class="center"> Conteudo </th>
+              <th class="center"> Criado em </th>
+               <th class="center"> Actions </th>
+          </tr>
+        </thead>
+
+        <tbody>
+        <% @infos.each do |info| %>
+          <tr>
+            <td> <%= info.id %> </td>
+            <td> <%= info.title %> </td>
+             <td> <%= info.content  %> </td>
+             <td> <%= info.created_at%></td>
+            <td>  
+             <%=  link_to 'Editar' , edit_users_backoffice_info_path(info), class:"waves-effect grey btn"  %>
+             <%=  link_to 'Mostrar' , users_backoffice_info_path(info), class:"waves-effect green btn" %>
+             <%=  link_to 'Excluir' , users_backoffice_info_path(info), class:"waves-effect red btn" ,method: :delete , data: {confirm: "Deseja realmente excluir ?"} %>
+            </td>
+          </tr>
+        <% end %>  
+        </tbody>
+      </table>
+
+<div class="center">
+      <%#= paginate @users %>
+</div>     
+
+</div>

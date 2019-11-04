@@ -1,0 +1,17 @@
+<div class="mover">
+
+<% @tickets.each do |ticket| %>
+
+<h3 style="color:#17375e;">  <%= ticket.title %> </h3>
+
+  <p style="text-align: justify"> <%= ticket.description.html_safe %> </p> 
+
+
+<% end %>
+
+
+</div>
+
+<br>
+<br>
+<br>

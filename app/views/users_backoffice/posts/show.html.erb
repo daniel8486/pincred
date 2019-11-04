@@ -1,0 +1,30 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<h1> Mostrar Posts </h1>
+
+<table>
+        <thead>
+          <tr>
+              <th> <strong> Titulo</strong> </th>
+              <td> <strong> Texto: </strong> </td>
+              <td>  <strong>Status:</strong> <td>
+              <th><strong> Ações:  </strong></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            
+            <td> <%= @post.title  %> </td>
+            <td>  <%= @post.text.html_safe %> </td>
+            <td> <%= @post.status %> </td>
+            <td> 
+            <%= link_to 'Editar', edit_users_backoffice_post_path(@post) , class: "waves-effect green btn" %> |
+<%= link_to 'Voltar', users_backoffice_posts_path , class: "waves-effect yellow btn"  %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>  

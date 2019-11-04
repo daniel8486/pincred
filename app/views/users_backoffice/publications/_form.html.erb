@@ -1,0 +1,46 @@
+<%#= form_with(model: publication, local: true) do |form| %>
+<%= form_with(model: [ :users_backoffice, @publication], local: true) do |form| %>
+  <% if publication.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(publication.errors.count, "error") %> prohibited this publication from being saved:</h2>
+
+      <ul>
+      <% publication.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content %>
+    <%= form.cktext_area :content %>
+  </div>
+
+  <div class="input-field">
+   <input type="checkbox" checked="checked" />  <%= form.check_box :status %> 
+   <span> <%= form.label :status %> </span>
+  </div>
+
+<br/>
+
+    <div class="file-field input-field">
+      <div class="btn">
+        <span> Arquivos PDF </span>
+        <%= form.file_field :documents, multiple: true %> 
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Um ou mais arquivos">
+      </div>
+    </div>
+  
+<br>
+  <div class="actions">
+  <a class="waves-effect grey btn">  <%= form.submit %> </a> 
+  </div>
+<% end %>

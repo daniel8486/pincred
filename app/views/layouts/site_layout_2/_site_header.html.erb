@@ -1,0 +1,31 @@
+<!-- HEADER  -->
+
+    <nav class= "nav-bar-default"  role="navigation"> 
+            <div class="nav-wrapper "> 
+             <a id="logo-container" href="#" class="brand-logo"> <%= image_tag 'logo_pincred_13.png' %> </a>
+              <ul class="right hide-on-med-and-down">
+                <li> <%=link_to 'HOME', site_welcome_index_path %> </li>
+                <li> <%#=link_to 'FINANCEIRA', page_welcome_index_path %> </li>
+                <li> <%=link_to 'PRODUTOS', page_prods_index_path %> </li>
+                <li> <%=link_to 'QUEM SOMOS', page_whoamis_index_path  %> </a></li>
+                <li> <%=link_to 'INFORMAÇÕES', page_infos_index_path  %> </li>
+                <li> <%=link_to 'CONTATOS' , page_conts_new_path%> </li>
+                
+               </ul> 
+              <ul id="slide-out" class="sidenav">
+                <li><a href="#!"> Barra de Navegação </a></li>
+               <li> <%=link_to 'HOME', site_welcome_index_path %> </li>
+                <li> <%#=link_to 'FINANCEIRA', page_welcome_index_path  %> </li>
+                <li> <%=link_to 'PRODUTOS', page_prods_index_path %> </li>
+                <li> <%=link_to 'QUEM SOMOS', page_whoamis_index_path %> </a></li>
+                <li> <%=link_to 'PUBLICAÇÕES', page_infos_index_path  %> </li>
+                <li> <%=link_to 'CONTATOS',page_conts_new_path %> </li>
+              </ul>
+              <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            
+        </nav>
+
+
+               
+       
+    <!-- END HEADER  -->     

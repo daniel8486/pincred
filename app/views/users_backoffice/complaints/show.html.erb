@@ -1,0 +1,43 @@
+
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+<h1> Listar Denúncias </h1>
+
+<table>
+        <thead>
+           <tr> 
+             <tr>
+               <th> <strong> TIPO DE CONTATO : </strong> </th>
+              <th> <strong> NOME : </strong> </th>
+              <th>  <strong>CPF</strong> <th>
+              <th><strong> EMAIL  </strong></th>
+              <th> <strong> TELEFONE </strong> </th>
+              <th><strong> CONTEUDO </strong></th>
+              <th><strong> Ações </strong> </th>
+              <th><strong> Editar </strong> </th>
+              <th><strong> Voltar </strong> </th>
+            </tr>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td> <%= @complaint.cpf   %> </td>
+            <td> <%= @complaint.description_name  %></td>
+            <td> <%= @complaint.cpf   %> </td>
+            <td> <%= @complaint.email %></td>
+            <td>  <%= @complaint.phone %> </td>
+            <td>  <%= @complaint.content.html_safe %> </td>
+            <td> 
+              <%= link_to 'Editar', edit_users_backoffice_complaint_path(@complaint), class: "waves-effect green btn" %> 
+            </td>
+            <td>
+               <%= link_to 'Voltar', users_backoffice_complaints_path, class: "waves-effect yellow btn"  %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>

@@ -1,0 +1,31 @@
+
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<h1> Mostrar Quem Somos </h1>
+
+<table>
+        <thead>
+          <tr>
+              <th> <strong> Titulo: </strong> </th>
+              <td> <strong> Conteudo: </strong> </td>
+              <td>  <strong> Status: </strong> <td>
+              <th><strong> Ações:  </strong></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            
+            <td> <%= @who.title %> </td>
+            <td>  <%= @who.content.html_safe %> </td>
+            <td> <%= @who.status %> </td>
+            <td> 
+            <%= link_to 'Editar',edit_users_backoffice_who_path(@who), class: "waves-effect green btn" %> |
+<%= link_to 'Voltar', users_backoffice_whos_path , class: "waves-effect yellow btn"  %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>  

@@ -1,0 +1,46 @@
+<div class="container">
+
+  <div class="row"> 
+   <div class="col-lg-12">
+      <h1 class="page-header"> <h3 class="left-align"> <%= action_message %></h3> </h1>
+   </div>
+
+   <% if @out.errors.any? %>
+  <div class="alert alert-danger alert-dismissable">
+     <button type="button" class="close" data-dismiss="alert" aria-hidden="text">
+     <ul> 
+        <% @out.errors.full_messages.each do |message|%>
+        <li> <%= message %> </li>
+        <% end %>
+     </ul>
+  </div> 
+
+<% end %>
+
+<div class="row">
+    <%= form_with(model: [ :users_backoffice, @out], local: true) do |form| %>
+  
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content%>
+    <%= form.cktext_area :content %>
+  </div>
+
+  <div class="input-field">
+    <input type="checkbox" checked="checked" />  <%= form.check_box :status %>
+    <span>  <%= form.label :status %> </span>
+  </div>
+
+  <div class="actions">
+    <a class="waves-effect grey btn">  <%= form.submit %> </a>
+  </div>
+
+<% end %>
+
+
+
+</div>

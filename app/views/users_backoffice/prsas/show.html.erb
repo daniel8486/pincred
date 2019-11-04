@@ -1,0 +1,32 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<h1> Mostrar PRSA </h1>
+
+<table>
+        <thead>
+          <tr>
+              <th> <strong> Titulo:</strong> </th>
+              <td> <strong> Texto: </strong> </td>
+              <th>  <strong> Ações:  </strong></th>
+              <th> <strong> Editar </strong>  </th>
+              <th> <strong> Voltar </strong> </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            
+            <td> <%= @prsa.title  %> </td>
+            <td>  <%= @prsa.content.html_safe %> </td>
+            <td> 
+            <%= link_to 'Editar', edit_users_backoffice_prsa_path(@prsa) , class: "waves-effect green btn" %> 
+            </td> 
+            <td>
+<%= link_to 'Voltar', users_backoffice_prsas_path , class: "waves-effect yellow btn"  %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>  

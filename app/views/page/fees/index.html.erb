@@ -1,0 +1,29 @@
+
+<div class="mover">  
+
+<h4> Tabela de Tarifas </h4>
+
+<% @fees.each do |fee| %>
+
+<table> 
+    <thead>
+  
+  </thead>
+        <thead>
+          <tr>
+           <th> <h4> <%=  fee.title  %> </h4> </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+           <td> <h5> <%= fee.content.html_safe%> </h5> <td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+<% end %>
+</div>
+

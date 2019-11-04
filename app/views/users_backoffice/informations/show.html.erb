@@ -1,0 +1,33 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<h1> Informações </h1>
+
+<table>
+        <thead>
+          <tr>
+              <th> <strong> ID : </strong> </th>
+              <th> <strong> Titulo:</strong> </th>
+              <td> <strong> Texto: </strong> </td>
+              <th>  <strong> Ações:  </strong></th>
+              <th> <strong> Editar </strong>  </th>
+              <th> <strong> Voltar </strong> </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+             <td> <%= @information.id  %> </td>
+            <td> <%= @information.title  %> </td>
+            <td>  <%= @information.content.html_safe %> </td>
+            <td> 
+            <%= link_to 'Editar', edit_users_backoffice_information_path(@information) , class: "waves-effect green btn" %> 
+            </td> 
+            <td>
+<%= link_to 'Voltar', users_backoffice_informations_path , class: "waves-effect yellow btn"  %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>  

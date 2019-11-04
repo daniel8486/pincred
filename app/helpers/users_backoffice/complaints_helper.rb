@@ -1,0 +1,2 @@
+module UsersBackoffice::ComplaintsHelper
+end

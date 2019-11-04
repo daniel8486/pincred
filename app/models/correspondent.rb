@@ -1,0 +1,2 @@
+class Correspondent < ApplicationRecord
+end

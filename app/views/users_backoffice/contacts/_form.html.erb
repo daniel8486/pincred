@@ -1,0 +1,70 @@
+
+
+
+<%#= form_with(model: contact, local: true) do |form| %>
+<%= form_with(model: [ :users_backoffice, @contact], local: true) do |form| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% contact.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <br>
+ <label style="margin-left: 7%;"> * TODOS OS CAMPOS SÃO OBRIGATÓRIOS ! </label>
+ <br>
+
+
+ </br>
+  <div class="row">  
+   
+     <form class="col s12">
+        
+  <div class="input-field col s6" style="margin-left: 7%;">
+    <select>
+      <option value="" disabled selected> Escolha uma Opção : </option>
+      <option value="1"> Fale Conosco </option>
+      <option value="2"> Cobrança </option>
+      <option value="3"> Ouvidoria </option>
+    </select>
+    <label> * SETOR</label>
+  </div>
+       
+      <div class="row">
+          <div class="input-field col s6" style="margin-left: 7%; margin-right: 7%;">
+           <%= form.text_field :description_name %>
+           <label for="first_name"> * NOME : </label>
+          </div>
+       <div class="row">
+          <div class="input-field col s3">
+            <%= form.text_field :cpf %>
+            <label for="cpf"> * CPF : </label>
+          </div>
+      <div class="input-field col s6" style="margin-left: 7%; margin-right: 7%;">
+          <%= form.text_field :email %>
+          <label for="email"> * EMAIL </label>
+        </div>
+      <div class="row">
+        <div class="input-field col s3">
+         <%= form.text_field :phone %>
+          <label for="telefone"> * TELEFONE </label>
+        </div>
+       
+        <div class="input-field col s10" style="margin-left: 7%;">
+           <%= form.text_area :content , class: "materialize-textarea"%>
+          <label for="conteudo da mensagem"> * CONTEÚDO DA MENSAGEM </label>
+        </div>
+    </form>
+  </div>
+
+  <div class="actions" style="margin-left: 7%;">
+     <a class="waves-effect blue btn">  <%= form.submit 'Enviar' , class: 'white-text'%> </a>
+  </div>
+</br>
+  <% end %>
+

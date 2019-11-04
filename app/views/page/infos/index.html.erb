@@ -1,0 +1,191 @@
+<!--   Icon Section   --> 
+
+<br>
+<br>
+<br>
+
+<div class="container">
+
+    <div class="row">
+     <% @infos.where(:id => 1).limit(1).each do |info,i|%>
+        <div class="col s12 m4">
+       
+          <div class="icon-block">
+            <h2 class="center blue-text"> <i class="medium material-icons">
+            <%= link_to 'monetization_on' ,page_demos_index_path  %>
+            </i></h2>
+            <h5 class="center"> <%= info.title %> </h5>
+
+            <p class="center"> 
+               <%#= info.content.html_safe %>
+           
+            </p> 
+           
+          </div>
+          <%end %>
+        </div>
+
+        <div class="col s12 m4">
+         <% @infos.where(:id => 2).limit(1).each do |info,i|%>
+          <div class="icon-block">
+            <h2 class="center blue-text"><i class=" medium material-icons"> 
+            <%= link_to 'public' , page_prsas_index_path  %>
+            </i></h2>
+            <h5 class="center"> <%= info.title %></h5>
+
+            <p class="center">
+            <%#= info.content.html_safe %>
+            </p>
+           
+          </div>
+          <% end %>
+        </div>
+
+        <div class="col s12 m4">
+           <% @infos.where(:id => 3).limit(1).each do |info,i|%>
+          <div class="icon-block">
+            <h2 class="center blue-text"><i class=" medium material-icons">
+            <%= link_to 'find_in_page' , page_fees_index_path %>
+            </i></h2>
+            <h5 class="center">  <%= info.title %>  </h5>
+
+            <p class="center"> 
+            <%#= info.content.html_safe %> </p>
+             
+          </div>
+        </div>
+      </div> 
+      
+
+    </div>
+    <% end %>
+  </div> 
+
+</div> 
+
+<br>
+<br>
+<br>
+
+<div class="container">
+
+<div class="row">
+     <% @infos.where(:id => 4).limit(1).each do |info,i|%>
+        <div class="col s12 m4">
+       
+          <div class="icon-block">
+            <h2 class="center blue-text"><i class="medium material-icons">
+            <%= link_to 'location_searching ' , page_risks_index_path %>
+            </i></h2>
+            <h5 class="center"> <%= info.title %> </h5>
+
+            <p class="center"> 
+               <%#= info.content.html_safe %>
+           
+            </p> 
+            
+          </div>
+          <%end %>
+        </div>
+
+        <div class="col s12 m4">
+         <% @infos.where(:id => 5).limit(1).each do |info,i|%>
+          <div class="icon-block">
+            <h2 class="center blue-text"><i class=" medium material-icons">  
+            <%= link_to 'local_phone' , page_conts_new_path %>
+            </i></h2>
+            <h5 class="center"> <%= info.title %></h5>
+
+            <p class="center">
+            <%#= info.content.html_safe %>
+            </p>
+            
+          </div>
+          <% end %>
+        </div>
+
+        <div class="col s12 m4">
+           <% @infos.where(:id => 6).limit(1).each do |info,i|%>
+          <div class="icon-block">
+            <h2 class="center blue-text"><i class=" medium material-icons"> 
+            <%= link_to 'report_problem' , page_complaints_new_path %>
+            </i></h2>
+            <h5 class="center">  <%= info.title %>  </h5>
+
+            <p class="center"> 
+            <%#= info.content.html_safe %> </p>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <% end %>
+  </div>
+  
+  
+
+</div>
+
+<br>
+<br>
+<br>
+
+
+<div class="container">
+
+    <div class="row">
+     <% @infos.where(:id => 7).limit(1).each do |info,i|%>
+        <div class="col s12 m4">
+       
+          <div class="icon-block">
+            <h2 class="center blue-text"> <i class="medium material-icons">
+            <%= link_to 'location_on' , page_obs_index_path %>
+            </i></h2>
+            <h5 class="center"> <%= info.title %> </h5>
+
+            <p class="center"> 
+               <%#= info.content.html_safe %>
+           
+            </p> 
+           
+          </div>
+          <%end %>
+        </div>
+
+        <div class="col s12 m4">
+         <% @infos.where(:id => 8).limit(1).each do |info,i|%>
+          <div class="icon-block">
+            <h2 class="center blue-text"><i class=" medium material-icons"> 
+            <%= link_to 'receipt' , page_scrs_index_path%>
+            </i></h2>
+            <h5 class="center"> <%= info.title %></h5>
+
+            <p class="center">
+            <%#= info.content.html_safe %>
+            </p>
+           
+          </div>
+          <% end %>
+        </div>
+
+           <div class="col s12 m4">
+         <% @infos.where(:id => 9).limit(1).each do |info,i|%>
+          <div class="icon-block">
+            <h2 class="center blue-text"><i class=" medium material-icons"> 
+            <%= link_to 'loop', page_moneys_index_path %>
+            </i></h2>
+            <h5 class="center"> <%= info.title %></h5>
+
+            <p class="center">
+            <%#= info.content.html_safe %>
+            </p>
+           
+          </div>
+          <% end %>
+        </div> 
+
+        
+  </div> 
+
+</div>

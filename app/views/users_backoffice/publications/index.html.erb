@@ -1,0 +1,51 @@
+<div class="container">
+<p id="notice"><%= notice %></p>
+
+<h1> Listagem de Publicações </h1>
+
+
+<table class="bordered highlight right">
+  <thead>
+    <tr> </tr>
+    <tr>
+      <th> <%= link_to 'New Publication', new_users_backoffice_publication_path, class: "waves-effect blue btn" %> </th>
+    </tr>
+  </thead>
+
+
+<table class="bordered highlight centered">
+  <thead>
+    <tr>
+      <th> Titulo </th>
+      <th> Conteudo </th>
+      <th> Status </th>
+      <th> File - Arquivos </th>
+      <th> Ações <th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @publications.each do |publication| %>
+      <tr>
+        <td><%= publication.title %></td>
+        <td><%= publication.content.html_safe %></td>
+        <td><%= publication.status %> </td>
+       
+        <td><%= link_to 'Mostrar', users_backoffice_publication_path(publication) ,  class: "waves-effect green btn"%></td>
+       
+      
+        <td><%= link_to 'Editar', edit_users_backoffice_publication_path(publication),  class: "waves-effect yellow btn" %></td>
+      
+     
+        <td><%= link_to 'Excluir', users_backoffice_publication_path(publication) , method: :delete, data: { confirm: 'Are you sure?' } , class: "waves-effect red btn"%></td>
+      
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+</div>

@@ -1,0 +1,33 @@
+<%= form_with(model: [:users_backoffice, @credit], local: true) do |form| %>
+  <% if credit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(credit.errors.count, "error") %> prohibited this about from being saved:</h2>
+
+      <ul>
+      <% credit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :content%>
+    <%= form.cktext_area :content %>
+  </div>
+
+  <div class="input-field">
+    
+    <input type="checkbox" checked="checked" />  <%= form.check_box :status %>
+    <span>  <%= form.label :status %> </span>
+  </div>
+
+  <div class="actions">
+    <a class="waves-effect grey btn">  <%= form.submit %> </a>
+  </div>
+<% end %>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Site Pincred </title>
+    <%= render 'layouts/admin_layout/config_admins'%>
+  </head>
+
+  <body> 
+    <%= render 'layouts/admin_layout/admins_header' %>
+    <%= yield %>
+    <%= render 'layouts/admin_layout/admins_main'%>
+    <%= render 'layouts/admin_layout/admins_footer'%>
+  </body>
+</html>

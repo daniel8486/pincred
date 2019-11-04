@@ -1,0 +1,56 @@
+<div class="container">
+
+<div class="row"> 
+   <div class="col-lg-12">
+      <h1 class="page-header"> <h3 class="left-align"> <%= action_message %></h3> </h1>
+   </div>
+
+   <% if @user.errors.any? %>
+   <div class="alert alert-danger alert-dismissable">
+     <button type="button" class="close" data-dismiss="alert" aria-hidden="text">
+     <ul> 
+        <% @user.errors.full_messages.each do |message|%>
+        <li> <%= message %> </li>
+        <% end %>
+     </ul>
+</div> 
+
+<% end %>
+
+<div class="row">
+    <%= form_with(model: [ :users_backoffice, @user], local: true) do |form| %>
+      <div class="row">
+        
+         <div class="input-field col s6">
+          <%= form.text_field :fisrt_name, placeholder: "Informe seu nome: ", class: "validate" %>
+          <%= form.label :fisrt_name %>
+        </div>
+        <div class="input-field col s6">
+          <%= form.text_field :last_name , placeholder: "Informe seu Ultimo Nome : ", class: "validate" %>
+          <%= form.label :last_name%>
+        </div>
+        <div class="input-field col s6">
+          <%= form.text_field :email, placeholder: "Informe seu email: ", class: "validate" %>
+          <%= form.label :email%>
+        </div>
+        <div class="input-field col s6">
+          <%= form.password_field :password, placeholder: "Informe sua Senha: ", class: "validate" %>
+          <%= form.label :password %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <%= form.password_field :password_confirmation, placeholder: "Repita sua Senha: ", class: "validate" %>
+          <%= form.label :password_confirmation %>
+        </div>
+      </div>
+      <button class="btn waves-effect green btn" type="submit" name="action"> Salvar
+    <i class="material-icons right">send</i>
+  </button>
+    <% end %>
+  </div>
+        
+
+
+
+</div>

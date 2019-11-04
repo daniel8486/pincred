@@ -1,0 +1,32 @@
+<h1> Listagem de Usuários </h1>
+<table>
+        <thead>
+          <tr>
+              <th class="center"> ID </th>
+              <th class="center"> Nome </th>
+              <th class="center"> Email </th>
+              <th class="center"> Ativo </th>
+              <th class="center"> Actions </th>
+</div>
+
+
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td> <%= @user.id %> </td>
+            <td> <% @user.id %> </td>
+            <td> <%= @user.email %> </td>
+            <td><%= @user.created_at%></td>
+            <td>  
+             <%=  link_to 'Editar' , edit_users_backoffice_users_path(@user), class:"waves-effect grey btn"  %>
+             <%=  link_to 'Voltar' , users_backoffice_users_path , class:"waves-effect yellow btn" %>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+  
+</div>

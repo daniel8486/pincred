@@ -1,0 +1,29 @@
+
+<div class="mover">  
+
+<h4 style="color:#17365d;"> DEMONSTRAÇÕES FINANCEIRAS </h4>
+
+<% @demos.each do |demo| %>
+
+<table> 
+    <thead>
+  
+  </thead>
+        <thead>
+          <tr>
+           <th> <%=  demo.title  %> </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+           <td> <%= demo.content.html_safe%><td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+<% end %>
+</div>
+

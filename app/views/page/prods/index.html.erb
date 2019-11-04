@@ -1,0 +1,20 @@
+
+<div class="mover">
+   
+    <% @products.each do |product| %>
+   
+         <h3 style="color:#17375e;"> <%= product.title %> </h3>
+
+   <p style="text-align: justify" > <%= product.description.html_safe %> </p> 
+
+
+     <% end %>
+
+
+</div>
+
+<br>
+<br>
+<br>
+
+

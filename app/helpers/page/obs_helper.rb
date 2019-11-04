@@ -1,0 +1,2 @@
+module Page::ObsHelper
+end

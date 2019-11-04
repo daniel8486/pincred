@@ -1,0 +1,59 @@
+<div class="container">
+<br>
+
+<p id="notice"><%= notice %></p>
+
+<h1> Lista de Denúncias </h1>
+
+<table class="bordered highlight right">
+  <thead>
+    <tr> </tr>
+    <tr>
+      <th> <%= link_to 'Incluir', new_users_backoffice_complaint_path, class: "waves-effect blue btn" %> </th>
+    </tr>
+  </thead>
+
+
+<table>
+  <thead>
+    <tr>
+      <th> TIPO DE DENÚNCIA </th>
+      <th> NOME </th>
+      <th> CPF</th>
+      <th> EMAIL </th>
+      <th> TELEFONE </th>
+      <th> CONTEUDO </th>
+      <th> AÇÕES </th>
+      <th> MOSTRAR </th>
+      <th> EDITAR </th>
+      <th> EXCLUIR </th>
+      <th> IMPRIMIR | GERAR PDF </th>
+    </tr>
+  </thead>
+
+  <tbody>
+      <% @complaints.each do |complaint| %>
+      <tr>
+        <td><%= complaint.cpf  %></td>
+        <td><%= complaint.description_name %></td>
+        <td><%= complaint.cpf  %></td>
+        <td><%= complaint.email %></td>
+        <td><%= complaint.phone %></td>
+        <td><%= complaint.content.html_safe  %></td>
+        <td><%= link_to 'Mostrar', users_backoffice_complaint_path(complaint), class: "waves-effect green btn"%></td>
+        <td><%= link_to 'Editar', edit_users_backoffice_complaint_path(complaint) , class: "waves-effect yellow btn"%></td>
+        <td><%= link_to 'Excluir', users_backoffice_complaint_path(complaint), method: :delete, data: { confirm: 'Are you sure?' } ,class: "waves-effect red btn"%></td> 
+        <td> 
+         <%= link_to 'print', root_path, class: "material-icons" %> | 
+         <%= link_to 'picture_as_pdf', root_path, class: "material-icons"%>
+        </td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+</div>

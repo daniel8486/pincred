@@ -1,0 +1,42 @@
+<div class="container">
+
+<p id="notice"><%= notice %></p>
+
+
+<div class="row">
+   <div class="col-lg-12">
+      <h1 class="page-header"> <h3 class="center-align"> Listando os Administradores </h3> </h1>
+   </div>
+</div>  
+    
+<table>
+        <thead>
+          <tr>
+              <th class="center"> ID </th>
+              <th class="center"> Nome </th>
+              <th class="center"> Email </th>
+              <th class="center"> Ativo </th>
+              <th class="center"> Actions </th>
+</div>
+
+
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td> <%= @admin.id %> </td>
+            <td> <% @admin.id %> </td>
+            <td> <%= @admin.email %> </td>
+            <td><%= @admin.created_at%></td>
+            <td>  
+             <%=  link_to 'Editar' , edit_admins_backoffice_admin_path(@admin), class:"waves-effect grey btn"  %>
+             <%=  link_to 'Voltar' , admins_backoffice_admins_path , class:"waves-effect yellow btn" %>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+  
+</div>

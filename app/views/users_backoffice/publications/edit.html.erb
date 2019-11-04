@@ -1,0 +1,8 @@
+<div class="container">
+<h1> Editar Publicação </h1>
+
+<%= render 'form', publication: @publication %>
+<br>
+<%= link_to 'Mostar', users_backoffice_publication_path(@publication) , class: "waves-effect green btn"%> |
+<%= link_to 'Voltar', users_backoffice_publications_path , class: "waves-effect yellow btn"%>
+</div>

@@ -1,0 +1,107 @@
+<!-- Dropdown Structure -->
+<ul id="dropdown4" class="dropdown-content">
+  <li class="divider"></li> 
+         <li> <%=link_to 'INFORMAÇÕES', users_backoffice_infos_path %> </li>
+ <li class="divider"></li>
+  <li> <%=link_to 'DEMONSTRAÇÕES FINANCEIRAS' , users_backoffice_demos_path %> </li>
+   <li class="divider"></li>
+   <li> <%=link_to 'PRSA' , users_backoffice_prsas_path%> </li>
+  <li class="divider"></li>
+    <li> <%=link_to 'TABELA DE TRIFAS' , users_backoffice_fees_path %> </li>
+     <li class="divider"></li>
+     <li> <%=link_to 'GESTÃO DE RISCOS', users_backoffice_risks_path %> </li>
+      <li class="divider"></li>
+     <li> <%=link_to 'CORRESPODENTES', users_backoffice_matchings_path %> </li>
+     <li class="divider"></li>
+      <li class="divider"></li>
+     <li> <%=link_to 'SCR' , users_backoffice_scrs_path  %> </li>
+      <li class="divider"></li>
+       <li class="divider"></li>
+     <li> <%=link_to 'EDUCAÇÃO FINANCEIRA' , users_backoffice_tickets_path %> </li>
+      <li class="divider"></li>
+</ul>
+
+
+
+
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li> <%=link_to 'PRIMEIRO BANNER', users_backoffice_banners_path %> </li>
+   <li> <%=link_to 'SEGUNDO BANNER', users_backoffice_imgs_path %> </li>
+  <li class="divider"></li>
+    <li> <%=link_to 'TERCEIRO BANNER', users_backoffice_imagems_path %> </li>
+</ul>
+<!-- Dropdown Structure -->
+<ul id="dropdown2" class="dropdown-content">
+      <li class="divider"></li>
+        <li> <%=link_to 'ICONE POSTS', users_backoffice_posts_index_path %> </li>
+      <li class="divider"></li>  
+        <li> <%=link_to 'ICONE CREDITO ', users_backoffice_credits_path %> </li>
+      <li class="divider"></li>
+        <li> <%=link_to 'ICONE TAXAS', users_backoffice_outs_path %> </li>
+      <li class="divider"></li>
+</ul>
+
+<!-- Dropdown Structure -->
+<ul id="dropdown3" class="dropdown-content">
+      
+        <li class="divider"></li> 
+         <li> <%=link_to 'PRODUTOS', users_backoffice_products_path %> </li>
+        <li class="divider"></li> 
+         <li> <%=link_to 'RODAPE', users_backoffice_contents_path %> </li> 
+        <li class="divider"></li> 
+         <li> <%=link_to 'QUEM SOMOS', users_backoffice_whos_path %> </a></li>
+        <li class="divider"></li>      
+</ul>
+<nav>
+  <div class="nav-wrapper blue darken-1">
+     <div class="nav-wrapper"> <a id="logo-container" href="#" class="brand-logo"> <%= image_tag 'logo_19.png' %> </a>
+      <ul class="right hide-on-med-and-down">
+       <!-- Dropdown Trigger -->
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdown3"> PÁGINAS <i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdown1"> BANNERS <i class="material-icons right">arrow_drop_down</i></a></li>
+      <li><a class="dropdown-trigger" href="#!" data-target="dropdown2"> ICONES <i class="material-icons right">arrow_drop_down</i></a></li>
+       <li><a class="dropdown-trigger" href="#!" data-target="dropdown4"> DEMAIS INFORMAÇÕES <i class="material-icons right">arrow_drop_down</i></a></li>
+      
+      
+      <li> <%=link_to 'CONTATOS', users_backoffice_contacts_path%> </li>
+      <li> <%=link_to 'DENÚNCIAS', users_backoffice_complaints_path%> </li>
+   
+      <%= link_to "SAIR", destroy_user_session_path, method: :delete, class: "waves-effect waves-light btn"%> 
+
+    </ul>
+  </div>
+</nav>
+
+
+ 
+  <ul id="slide-out" class="sidenav">
+    <li><div class="user-view">
+      <div class="background">
+        <img src="images/office.jpg">
+      </div>
+      <a href="#user"><img class="circle" src="#"></a>
+      <a href="#name"><span class="black-text name"> <p> Usuário Está Logado como : </p></span></a>
+      <a href="#email"><span class="black-text email"> <%= current_user %> </span></a>
+    </div></li>
+    
+   
+    <li><div class="divider"></div></li>
+                 <li> <%=link_to 'BANNERS', users_backoffice_banners_path %> </li>
+                 <li> <%=link_to 'POSTS', users_backoffice_posts_index_path %> </li>
+               <li> <%=link_to 'RODAPE', users_backoffice_contents_path %> </li>
+                <li> <%=link_to 'PRODUTOS', users_backoffice_products_path %> </li>
+                <li> <%=link_to 'QUEM SOMOS', users_backoffice_whos_path %> </a></li>
+                <li> <%=link_to 'PUBLICAÇÕES', users_backoffice_publications_path %> </li>
+                <li> <%=link_to 'CONTATOS', users_backoffice_contacts_path%> </li>
+                 <%= link_to "SAIR", destroy_user_session_path, method: :delete, class: "waves-effect waves-light btn"%> 
+    <li><a class="subheader"> USER </a></li>
+    
+
+     <li><a> <%= link_to "SAIR", destroy_user_session_path, method: :delete %></a></li>
+
+
+  </ul>
+
+  <a href="#" data-target="slide-out" class="sidenav-trigger"> <i class="material-icons">menu</i></a>
+

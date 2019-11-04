@@ -1,0 +1,52 @@
+
+<div class="container">
+
+<br>
+<br>
+
+<p id="notice"><%= notice %></p>
+
+<h1> Listas Tabelas de Tarifas </h1>
+
+<table class="bordered highlight right">
+  <thead>
+    <tr> </tr>
+    <tr>
+      <th> <%= link_to 'Incluir', new_users_backoffice_fee_path , class: "waves-effect blue btn" %> </th>
+    </tr>
+  </thead>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Titulo:</th>
+      <th>Texto: </th>
+      <th> Ações </th>
+      <th> Mostrar </th>
+      <th> Editar </th>
+      <th> Excluir </th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fees.each do |fee| %>
+      <tr>
+        <td><%= fee.title %></td>
+        <td><%= truncate(fee.content.html_safe, :length => 100)  %></td>
+        <td> </td>
+        <td><%= link_to 'Mostrar', users_backoffice_fee_path(fee), class: "waves-effect green btn"%></td>
+        <td><%= link_to 'Editar', edit_users_backoffice_fee_path(fee), class: "waves-effect yellow btn"%></td>
+        <td><%= link_to 'Excluir', users_backoffice_fees_path(fee) , method: :delete, data: { confirm: 'Are you sure?' } ,class: "waves-effect red btn"%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+
+</div>

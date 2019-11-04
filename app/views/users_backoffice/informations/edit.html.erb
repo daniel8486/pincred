@@ -1,0 +1,8 @@
+<div class="container">
+<h1>Editar Sobre</h1>
+
+<%= render 'form', information: @information %>
+
+<%= link_to 'Mostrar', users_backoffice_information_path(@information) , class: "waves-effect green btn" %> |
+<%= link_to 'Voltar', users_backoffice_informations_path , class: "waves-effect yellow btn" %>
+</div>

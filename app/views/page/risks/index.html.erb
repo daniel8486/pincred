@@ -1,0 +1,29 @@
+
+<div class="mover">  
+
+<h4> Gestão de Riscos </h4>
+
+<% @risks.each do |risk| %>
+
+<table> 
+    <thead>
+  
+  </thead>
+        <thead>
+          <tr>
+           <th> <h4> <%=  risk.title  %> </h4> </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+           <td> <h5> <%= risk.content.html_safe%> </h5> <td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+<% end %>
+</div>
+

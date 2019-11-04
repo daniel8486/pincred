@@ -1,0 +1,34 @@
+<%#= form_with(model: @about, local: true) do |form| %>
+<%= form_with(model: [ :users_backoffice, @about], local: true) do |form| %>
+  <% if about.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(about.errors.count, "error") %> prohibited this about from being saved:</h2>
+
+      <ul>
+      <% about.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text%>
+    <%= form.cktext_area :text %>
+  </div>
+
+  <div class="input-field">
+    
+    <input type="checkbox" checked="checked" />  <%= form.check_box :status %>
+    <span>  <%= form.label :status %> </span>
+  </div>
+
+  <div class="actions">
+    <a class="waves-effect grey btn">  <%= form.submit %> </a>
+  </div>
+<% end %>

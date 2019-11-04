@@ -1,0 +1,8 @@
+<div class="container">
+<h1> Editar Quem Somos </h1>
+
+<%= render 'form', who: @who %>
+
+<%= link_to 'Mostrar', users_backoffice_who_path(@who) ,class: "waves-effect green btn"%> |
+<%= link_to 'Voltar', users_backoffice_whos_path, class: "waves-effect yellow btn" %>
+</div>

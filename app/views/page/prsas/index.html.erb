@@ -1,0 +1,27 @@
+
+<div class="mover">  
+
+<% @prsas.each do |prsa| %>
+
+<table> 
+    <thead>
+  
+  </thead>
+        <thead>
+          <tr>
+           <th> <h4> <%=  prsa.title  %> </h4> </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+           <td> <h5> <%= prsa.content.html_safe%> </h5> <td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+<% end %>
+</div>
+

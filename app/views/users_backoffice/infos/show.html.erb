@@ -1,0 +1,32 @@
+<h1> Listagem INFOS  </h1>
+<table>
+        <thead>
+          <tr>
+               <th class="center"> ID </th>
+               <th class="center"> Titulo </th>
+               <th class="center"> Descricao</th>
+               <th class="center"> Actions </th>
+             
+</div>
+
+
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td> <%= @info.id %> </td>
+            <td> <%= @info.title%> </td>
+            <td> <%= @info.content %> </td>
+            <td>  
+             <%=  link_to 'Editar' , edit_users_backoffice_info_path(@info), class:"waves-effect grey btn"  %>
+             <%=  link_to 'Voltar' , users_backoffice_infos_path , class:"waves-effect yellow btn" %>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+  
+</div>
+

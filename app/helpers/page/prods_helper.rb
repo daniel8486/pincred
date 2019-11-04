@@ -1,0 +1,2 @@
+module Page::ProdsHelper
+end

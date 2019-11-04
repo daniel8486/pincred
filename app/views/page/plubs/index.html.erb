@@ -1,0 +1,23 @@
+
+    <% @publications.each_with_index do |publication| %>
+   
+
+     <h3> <%= publication.title %> </h3>
+   
+
+
+    <p style="text-align: justify"> <%= publication.content.html_safe %> <p>
+
+    
+
+    <td> <%#= publication.documents %> </td>
+
+
+
+             <td> <%#= link_to("Anexo #(index+1)", document.url, target: '_blank')%> </td>
+
+
+   
+  <% end %>
+
+
