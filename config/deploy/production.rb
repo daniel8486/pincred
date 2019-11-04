@@ -1,4 +1,4 @@
-set :branch, 'master'
+set :branch, 'origin master'
 set :server_address, '167.172.42.75'
  
 ask(:password, nil, echo: false)
