@@ -7,7 +7,3 @@ server fetch(:server_address), user: "deploy", roles: %w{app db web}
 set :nginx_server_name, fetch(:server_address)
 set :puma_preload_app, true
 
-config.cache_classes = true
-config.server_static_assets = true
-config.assets.compile = true
-config.assets.digest = true
