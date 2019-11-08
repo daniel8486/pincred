@@ -338,7 +338,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.6.1p33
+   ruby 2.6.5p33
 
 BUNDLED WITH
    2.0.2
