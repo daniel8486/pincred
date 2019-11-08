@@ -40,7 +40,7 @@ gem 'kaminari'
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'carrierwave', '~> 2.0'
 # Use ActiveStorage variant
-gem 'mini_magick', '~> 4.8'
+#gem 'mini_magick', '~> 4.8'
 gem 'cancancan'
 gem 'ed25519', '~> 1.2', '>= 1.2.4'
 gem 'bcrypt_pbkdf', '~> 1.0'
@@ -68,7 +68,10 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-
+  gem "capistrano", "~> 3.10", require: false
+  gem "capistrano-rails", "~> 1.3", require: false
+  gem 'capistrano3-puma', require: false
+  gem 'capistrano-rvm', require: false
 end
 
 group :test do
