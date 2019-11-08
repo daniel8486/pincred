@@ -4,7 +4,7 @@ lock "~> 3.11.2"
 set :application, "pin_cred_prod"
 set :repo_url, "git@github.com:daniel8486/pincred.git" 
 
-set :deploy_to, "/var/www/pin_cred_prod"
+set :deploy_to, "/var/www/pincred"
  
 #append :linked_files, "config/database.yml", "config/storage.yml", "config/master.key"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache","tmp/sockets","vendor/bundle",".bundle","public/system", "public/uploads"
