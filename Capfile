@@ -43,11 +43,15 @@ require "capistrano/deploy"
 require "capistrano/scm/git"
 require 'capistrano/rails'
 require 'capistrano/rvm'
-require 'capistrano/puma'
+#require 'capistrano/puma'
+require 'capistrano/passenger'
+
+set :rvm_type, :user
+set :rvm_ruby_version, '2.6.1'
  
 install_plugin Capistrano::SCM::Git
-install_plugin Capistrano::Puma
-install_plugin Capistrano::Puma::Workers
-install_plugin Capistrano::Puma::Nginx
+#install_plugin Capistrano::Puma
+#install_plugin Capistrano::Puma::Workers
+#install_plugin Capistrano::Puma::Nginx
  
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
