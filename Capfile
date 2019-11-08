@@ -47,7 +47,7 @@ require 'capistrano/rvm'
 require 'capistrano/passenger'
 
 set :rvm_type, :user
-set :rvm_ruby_version, '2.6.1'
+set :rvm_ruby_version, '2.6.5'
  
 install_plugin Capistrano::SCM::Git
 #install_plugin Capistrano::Puma
