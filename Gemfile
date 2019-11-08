@@ -72,7 +72,7 @@ group :development do
   gem "capistrano-rails", "~> 1.3", require: false
   #gem 'capistrano3-puma', require: false
   gem 'capistrano-rvm', require: false
-  gem 'capistrano/passenger', require: false
+  gem 'capistrano-passenger', require: false
 end
 
 group :test do
