@@ -4,7 +4,7 @@ Rails.application.configure do
   # Code is not reloaded between requests.
   config.cache_classes = true
   config.server_static_assets = true
-  config.assets.compile = true
+  config.assets.compile = false
   config.assets.digest = true
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
@@ -12,7 +12,7 @@ Rails.application.configure do
   # Rake tasks automatically ignore this option for performance.
   config.eager_load = true
 
-  config.web_console.whitelisted_ips = '165.22.39.144'
+  #config.web_console.whitelisted_ips = '165.22.39.144'
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
