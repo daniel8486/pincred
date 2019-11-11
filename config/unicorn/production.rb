@@ -1,5 +1,13 @@
-root = "/var/www/pincred/current" working_directory root
+root = "/var/www/pincred/current" 
+working_directory root
+
 pid "#{root}/tmp/pids/unicorn.pid"
-stderr_path "#{root}/log/unicorn.log" stdout_path "#{root}/log/unicorn.log"
-worker_processes 4 timeout 30 preload_app true
+
+stderr_path "#{root}/log/unicorn.log" 
+stdout_path "#{root}/log/unicorn.log"
+
+worker_processes 4 
+timeout 30 
+preload_app true
+
 listen '/tmp/pincred.sock', backlog: 64
