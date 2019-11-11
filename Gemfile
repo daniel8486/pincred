@@ -72,7 +72,7 @@ group :development do
   gem 'capistrano-rvm'
   gem 'capistrano-bundler', '~> 1.5'
   gem 'capistrano-rails','~> 1.4'
-
+  gem 'capistrano3-unicorn'
 end
 
 group :test do
@@ -88,6 +88,7 @@ group :production do
   gem 'rails_12factor'
   #gem 'heroku-deflater'
   gem 'mysql2'#, '~> 0.3.18'
+  gem 'unicorn'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
