@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.2"
 
-set :application, "pincred"
+set :application, "pin_cred_prod"
 set :repo_url, "git@github.com:daniel8486/pincred.git"
 set :deploy_to, '/var/www/pincred'
 set :branch, 'master'
