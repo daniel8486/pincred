@@ -60,6 +60,6 @@
 #     # password: "please use keys"
 #   }
 
-role :app, %w{deploy@167.172.224.124}
-role :web, %w{deploy@167.172.224.124}
-role :db, %w{deploy@167.172.224.124}
+role :app, %w{deploy@165.22.39.144}
+role :web, %w{deploy@165.22.39.144}
+role :db, %w{deploy@165.22.39.144}
