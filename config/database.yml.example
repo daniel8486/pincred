@@ -77,8 +77,12 @@ test:
 #
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
-#
- 
+# 
 production:
-  <<: *default
-  database: pin_cred_prod_production
+  adapter: postgresql
+  encoding: unicode
+  database: pincred
+  username: usrapp
+  password: Athus0401@@Otto1311@@
+  host: 165.22.39.144
+  port: 5432
