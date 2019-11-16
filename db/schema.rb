@@ -12,10 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_10_31_175248) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "abouts", force: :cascade do |t|
+  create_table "abouts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "description"
     t.text "text"
     t.boolean "status"
@@ -23,7 +20,7 @@ ActiveRecord::Schema.define(version: 2019_10_31_175248) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "admins", force: :cascade do |t|
+  create_table "admins", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -35,7 +32,7 @@ ActiveRecord::Schema.define(version: 2019_10_31_175248) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  create_table "banners", force: :cascade do |t|
+  create_table "banners", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.string "image"
@@ -45,7 +42,7 @@ ActiveRecord::Schema.define(version: 2019_10_31_175248) do
     t.string "avatar"
   end
 
-  create_table "ckeditor_assets", force: :cascade do |t|
+  create_table "ckeditor_assets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "data_file_name", null: false
     t.string "data_content_type"
     t.integer "data_file_size"
@@ -55,7 +52,7 @@ ActiveRecord::Schema.define(version: 2019_10_31_175248) do
     t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
-  create_table "complaints", force: :cascade do |t|
+  create_table "complaints", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "description_name"
     t.string "rg"
     t.string "cpf"
@@ -68,7 +65,7 @@ ActiveRecord::Schema.define(version: 2019_10_31_175248) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "contacts", force: :cascade do |t|
+  create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "description_name"
     t.string "rg"
     t.string "cpf"
@@ -81,7 +78,7 @@ ActiveRecord::Schema.define(version: 2019_10_31_175248) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "contents", force: :cascade do |t|
+  create_table "contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "address"
     t.string "phone"
@@ -91,14 +88,14 @@ ActiveRecord::Schema.define(version: 2019_10_31_175248) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "correspondents", force: :cascade do |t|
+  create_table "correspondents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "credits", force: :cascade do |t|
+  create_table "credits", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.boolean "status"
@@ -106,29 +103,21 @@ ActiveRecord::Schema.define(version: 2019_10_31_175248) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "demos", force: :cascade do |t|
+  create_table "demos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "fees", force: :cascade do |t|
+  create_table "fees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "imagems", force: :cascade do |t|
-    t.string "title"
-    t.text "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "avatar"
-  end
-
-  create_table "imgs", force: :cascade do |t|
+  create_table "imagems", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.datetime "created_at", null: false
@@ -136,21 +125,29 @@ ActiveRecord::Schema.define(version: 2019_10_31_175248) do
     t.string "avatar"
   end
 
-  create_table "information", force: :cascade do |t|
+  create_table "imgs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "avatar"
+  end
+
+  create_table "information", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "infos", force: :cascade do |t|
+  create_table "infos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "matchings", force: :cascade do |t|
+  create_table "matchings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.datetime "created_at", null: false
@@ -158,14 +155,14 @@ ActiveRecord::Schema.define(version: 2019_10_31_175248) do
     t.string "content"
   end
 
-  create_table "money", force: :cascade do |t|
+  create_table "money", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "outs", force: :cascade do |t|
+  create_table "outs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.boolean "status"
@@ -173,7 +170,7 @@ ActiveRecord::Schema.define(version: 2019_10_31_175248) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "posts", force: :cascade do |t|
+  create_table "posts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "text"
     t.boolean "status"
@@ -181,7 +178,7 @@ ActiveRecord::Schema.define(version: 2019_10_31_175248) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "products", force: :cascade do |t|
+  create_table "products", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.integer "status"
@@ -189,14 +186,14 @@ ActiveRecord::Schema.define(version: 2019_10_31_175248) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "prsas", force: :cascade do |t|
+  create_table "prsas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "publications", force: :cascade do |t|
+  create_table "publications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.boolean "status"
@@ -205,21 +202,21 @@ ActiveRecord::Schema.define(version: 2019_10_31_175248) do
     t.json "documents"
   end
 
-  create_table "risks", force: :cascade do |t|
+  create_table "risks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "scrs", force: :cascade do |t|
+  create_table "scrs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "taxes", force: :cascade do |t|
+  create_table "taxes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.boolean "status"
@@ -227,14 +224,14 @@ ActiveRecord::Schema.define(version: 2019_10_31_175248) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "tickets", force: :cascade do |t|
+  create_table "tickets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -248,7 +245,7 @@ ActiveRecord::Schema.define(version: 2019_10_31_175248) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "whos", force: :cascade do |t|
+  create_table "whos", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.boolean "status"
