@@ -1,6 +1,6 @@
 class UsersBackoffice::PrsasController < UsersBackofficeController
  before_action :set_prsa, only: [:show, :edit, :update, :destroy]
- #before_action :authenticate_user!
+ before_action :authenticate_user!
   
     # GET /abouts
     # GET /abouts.json

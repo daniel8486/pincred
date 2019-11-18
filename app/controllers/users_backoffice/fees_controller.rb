@@ -1,6 +1,6 @@
 class UsersBackoffice::FeesController < UsersBackofficeController
  before_action :set_fees, only: [:show, :edit, :update, :destroy]
- #before_action :authenticate_user!
+ before_action :authenticate_user!
   
     # GET /abouts
     # GET /abouts.json

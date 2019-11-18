@@ -1,6 +1,6 @@
 class UsersBackoffice::OutsController < UsersBackofficeController
   before_action :set_out, only: [:edit,:update,:destroy,:show]
-  #before_action :authenticate_user!
+  before_action :authenticate_user!
    def index
      @outs = Out.all #.page(params[:page]).per(5)
    end

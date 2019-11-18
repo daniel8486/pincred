@@ -1,7 +1,7 @@
 class UsersBackoffice::BannersController < UsersBackofficeController
  
   before_action :set_banner, only: [:show, :edit, :update, :destroy]
-  #before_action :authenticate_user!
+  before_action :authenticate_user!
 
   def index
     @banners = Banner.all.page(params[:page]).per(5)

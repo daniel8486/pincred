@@ -1,5 +1,5 @@
 class AdminsBackoffice::AdminsController < AdminsBackofficeController
- #before_action :verify_password, only:[:update]
+ before_action :verify_password, only:[:update]
  before_action :set_admin, only: [:edit,:update,:destroy,:show]
 
   def index
@@ -50,11 +50,11 @@ class AdminsBackoffice::AdminsController < AdminsBackofficeController
 
  private
 
- #def verify_password 
-   #if params[:admin][:password].blank? && params[:admin][:password_confirmation].blank?
-    #params[:admin].extract!(:password,:password_confirmation)
-   #end 
- #end
+ def verify_password 
+   if params[:admin][:password].blank? && params[:admin][:password_confirmation].blank?
+    params[:admin].extract!(:password,:password_confirmation)
+   end 
+ end
 
  def set_admin
   @admin = Admin.find(params[:id])

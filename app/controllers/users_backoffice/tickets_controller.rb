@@ -1,6 +1,6 @@
 class UsersBackoffice::TicketsController < UsersBackofficeController
   before_action :set_ticket, only: [:show, :edit, :update, :destroy]
-  #before_action :authenticate_user!
+  before_action :authenticate_user!
   
   # GET /matchings
   # GET /matchings.json
