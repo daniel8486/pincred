@@ -77,7 +77,7 @@ group :development do
   gem 'capistrano-bundler', '~> 1.5'
   gem 'capistrano-rails','~> 1.4'
   gem 'capistrano3-unicorn'
-  gem 'mysql2'#, '~> 0.3.18'
+  #gem 'mysql2'#, '~> 0.3.18'
 end
 
 group :test do

@@ -1,6 +1,6 @@
 class UsersBackoffice::InformationsController < UsersBackofficeController
   before_action :set_information, only: [:edit,:update,:destroy,:show]
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
 
   def index
     @informations = Information.all #.page(params[:page]).per(5)

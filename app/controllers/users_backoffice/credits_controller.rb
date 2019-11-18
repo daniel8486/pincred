@@ -1,6 +1,6 @@
 class UsersBackoffice::CreditsController < UsersBackofficeController
   before_action :set_credit, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
   
     # GET /posts
     # GET /posts.json

@@ -1,6 +1,6 @@
 class UsersBackoffice::WhosController < UsersBackofficeController
   before_action :set_who, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
   
   # GET /whos
   # GET /whos.json

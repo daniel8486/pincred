@@ -1,6 +1,6 @@
 class UsersBackoffice::AboutsController < UsersBackofficeController
  before_action :set_about, only: [:show, :edit, :update, :destroy]
- before_action :authenticate_user!
+ #before_action :authenticate_user!
   
     # GET /abouts
     # GET /abouts.json

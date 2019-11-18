@@ -1,6 +1,6 @@
 class UsersBackoffice::ImgsController < UsersBackofficeController
   before_action :set_img, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
     # GET /posts
     # GET /posts.json
     def index

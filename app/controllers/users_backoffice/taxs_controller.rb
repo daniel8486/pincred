@@ -1,6 +1,6 @@
 class UsersBackoffice::TaxsController < UsersBackofficeController
   before_action :set_tax, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!
+  #before_action :authenticate_user!
     # GET /posts
     # GET /posts.json
     def index

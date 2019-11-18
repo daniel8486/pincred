@@ -1,7 +1,7 @@
 class UsersBackoffice::UsersController < UsersBackofficeController
  before_action :verify_password, only:[:update]
  before_action :set_user, only: [:edit,:update,:destroy,:show]
- before_action :authenticate_user!
+ #before_action :authenticate_user!
   def index
     @users = User.all #.page(params[:page]).per(5)
   end

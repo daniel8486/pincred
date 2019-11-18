@@ -1,6 +1,6 @@
 class UsersBackoffice::ScrsController < UsersBackofficeController
     before_action :set_scr, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user!
+    #before_action :authenticate_user!
     
     # GET /matchings
     # GET /matchings.json
