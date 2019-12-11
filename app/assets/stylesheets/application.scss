@@ -141,10 +141,10 @@
 .card { 
   background-color: #FFF;
   border-radius: 15px 15px; 
-  top: 263px; 
-  margin: 0 0 0 0 auto;
+  top: 0 auto; 
+  margin-top: 263px;
   clear: both;
-  align-content: center !important;
+  margin-left: -45px;
 }
 
 
@@ -173,5 +173,10 @@ main {
   src: url(../assets/fonts/bahnschrift.ttf);
 }
 */
+
+
+
+
+
 
 
