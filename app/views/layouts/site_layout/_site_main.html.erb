@@ -141,6 +141,10 @@
           <h2 class="header col s14 black-text bold"> <%= imagem.content.html_safe  %>  </h5>
         </div>
       </div>
+       <div class="row center">
+         <%= link_to 'Saiba Mais',  page_prods_index_path , class: "btn-large waves-effect waves-light blue lighten-1"%>
+        </div>
+      </div>
     </div>
     <div class="parallax"> <%= image_tag imagem.avatar_url %> </div>
     <% end %>
