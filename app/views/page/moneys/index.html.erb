@@ -1,10 +1,10 @@
 <div class="mover">
 
-<% @tickets.each do |ticket| %>
+<% @calls.each do |call| %>
 
-<h3 style="color:#17375e;">  <%= ticket.title %> </h3>
+<h3 style="color:#17375e;">  <%= call.title %> </h3>
 
-  <p style="text-align: justify"> <%= ticket.description.html_safe %> </p> 
+  <p style="text-align: justify"> <%= call.description.html_safe %> </p> 
 
 
 <% end %>

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
  
   namespace :users_backoffice do
+    get 'calls/index'
+    resources :calls
+  end
+  namespace :users_backoffice do
     get 'tickets/index'
     resources :tickets
   end
