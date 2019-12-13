@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
  
+  namespace :page do
+    get 'standby/index'
+  end
   namespace :users_backoffice do
     get 'calls/index'
     resources :calls
@@ -123,6 +126,8 @@ Rails.application.routes.draw do
   #get 'financeira', to: 'page/welcome/index'
 
   root to: 'site/welcome#index'
-  
+  #root to: 'page/standby#index'
+
+
 
 end

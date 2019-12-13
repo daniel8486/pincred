@@ -52,6 +52,7 @@ gem 'nokogiri'
 gem 'rack', '~> 2.0.1'
 gem 'rspec'
 #gem 'mina'
+gem 'sweetalert-rails'
 # Use Capistrano for deployment
 
 #gem 'capistrano-rails', group: :development
