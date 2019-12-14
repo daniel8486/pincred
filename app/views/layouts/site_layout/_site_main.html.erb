@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"> <%= image_tag banner.avatar_url %></div>
+    <div class="parallax"> <%= image_tag banner.avatar_url , class: 'resposive-img' , size: '50x50'%></div>
     <% end %>
   </div>
 
@@ -54,7 +54,7 @@
             <h5 class="center" style="color: #17365d;"> <%= credit.title %></h5>
 
             <p class="center">
-            <%= credit.content.html_safe %>
+            <%= credit.content.html_safe  %>
             </p>
           </div>
           <% end %>
@@ -88,7 +88,7 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><%= image_tag img.avatar_url %> </div>
+    <div class="parallax"><%= image_tag img.avatar_url , class: 'resposive-img' , size: '50x50'%> </div>
   <%# end %>
   </div>
 
@@ -116,7 +116,7 @@
         </div>
       </div>
     </div> 
-    <div class="parallax"> <%= image_tag imagem.avatar_url %> </div>
+    <div class="parallax"> <%= image_tag imagem.avatar_url , class: 'resposive-img' , size: '50x50' %> </div>
     <% end %>
      <div class="row center">
          <%= link_to 'Saiba Mais',  page_moneys_index_path , class: "btn-large waves-effect waves-light blue lighten-1"%>
