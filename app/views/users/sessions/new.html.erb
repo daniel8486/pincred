@@ -1,78 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<div class="section"> </div>
-  <main> 
-  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <center>
-      <%= image_tag('logoOk_1@2x.png', class: "responsive-img", width: '250px') %> 
-      <div class="section"></div>
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
-      <h5 class="blue-text"> Administrativo USER </h5>
-      <div class="section"></div>
 
-      <div class="container">
-        <div class="z-depth-1 grey lighten-4 row" style="display: inline-block; padding: 32px 48px 0px 48px; border: 1px solid #EEE;">
+    <link rel="icon" href="Favicon.png">
 
-          <form class="col s12" method="post">
-            <div class='row'>
-              <div class='col s12'>
-              </div>
+
+</head>
+<body>
+
+<br/>
+<br/>
+
+<main class="login-form">
+    <div class="cotainer">
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                      <% if flash.present? %>
+                      <% flash.each do |key, value| %>
+                        <div class="flash <%= key %>"><%= value %></div>
+                       <% end %>
+                       <% end %>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div> 
+                <div class="card">
+                    <div class="card-header text-center"> <%= image_tag("logo_pincred.png", class: 'logo_topo', alt: 'logo Pincred')%> </div>
+                    
+                    <div class="card-body">
+                        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+                            <div class="form-group row">
+                                <label for="email_address" class="col-md-4 col-form-label text-md-right"> Email : </label>
+                                <div class="col-md-6">
+                                     <%= f.email_field :email, autofocus: true, type: 'text' , class: 'form-control', placeholder: 'Seu Email', value: '' ,id: 'email_address'%>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="password" class="col-md-4 col-form-label text-md-right"> Senha :</label>
+                                <div class="col-md-6">
+                                     <%= f.password_field :password, type: 'password' , class: 'form-control', placeholder: 'Sua Senha', value: '', id: 'password' %>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <div class="col-md-6 offset-md-4">
+                                    <div class="checkbox">
+                                        <label>
+                                            <%= render "users/shared/links" %>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 offset-md-4">
+                              <%= f.submit "Entrar" ,class: 'btn btn-primary'%>
+                            </div>
+                    </div>
+                    <% end %>
+                </div>
             </div>
-
-            <div class='row'>
-              <div class='input-field col s12'>
-               <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-                <label for='email'>Enter your email</label>
-              </div>
-            </div>
-
-            <div class='row'>
-              <div class='input-field col s12'>
-                <%= f.password_field :password, autocomplete: "current-password" %>
-                <label for='password'>Enter your password</label>
-              </div>
-              <label style='float: right;'>
-								<a class='pink-text' href='#!'><b>
-                
-                <% if devise_mapping.rememberable? %>
-                  <%= f.check_box :remember_me %>
-                   <%= f.label :remember_me %>
-                <% end %>
-                
-                
-                </b></a>
-							</label>
-            </div>
-
-            <br />
-            <center>
-              <div class='row'>
-                <button type='submit' name='btn_login' class='col s12 btn btn-large waves-effect grey'> 
-                  
-                  <div class="actions">
-    
-                       <%= f.submit "ENTRAR" %>
-
-                         </div>
-                 
-
-                 </button>
-              </div>
-            </center>
-          </form>
         </div>
-      </div>
-      <a> 
-         
-        <%= render "users/shared/links" %>
+    </div>
+    </div>
 
-      </a>
-    </center>
+</main>
 
-    <div class="section"></div>
-    <div class="section"></div>
-  </main>
-
-  
-
-  
-<% end %>
+</body>
+</html>
