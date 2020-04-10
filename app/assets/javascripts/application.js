@@ -14,7 +14,6 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery
-//= require materialize-sprockets
 //= require sweetalert
 //= require bootstrap/dist/js/bootstrap 
 //= require popper.js/dist/popper
