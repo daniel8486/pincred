@@ -14,12 +14,11 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery
-//= require jquery_ujs
 //= require materialize-sprockets
 //= require sweetalert
 //= require bootstrap/dist/js/bootstrap 
 //= require popper.js/dist/popper
-//= require_tree .
+//= require_tree.
 
 
 // Carregador automatico do JQUERY 
